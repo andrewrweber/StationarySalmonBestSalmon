@@ -13,7 +13,7 @@
   <p>Posted by: <a ui-sref="user({id: data.creator._id})">{{ event.creator.username }}</a></p>
   <!-- description -->
   <p class="description">Description: {{ event.description }}</p>
-  <p class="datetime">When: {{ event.datetime }}</p>
+  <p class="datetime">When: {{ event.datetime | date: "EEEE, MMM d, y h:mm a" }}</p>
 </div>
 
 <!-- comment form -->
