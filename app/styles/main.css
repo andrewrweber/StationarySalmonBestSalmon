@@ -130,7 +130,42 @@ textarea {
   color: green;
 }
 
-h1, h3 {
+h1, h3, h4, .active {
   color: #2980b9;
 }
 
+h1 {
+  font-size: 40px;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active,
+.navbar-default .navbar-nav>.active:visited,
+.navbar-default .navbar-nav>.active>a:visited,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active:focus,
+.navbar-default .navbar-nav>.active,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li.active,
+.navbar-default .navbar-nav>li.active a,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand:visited,
+.navbar-default .navbar-brand:focus,
+a {
+  color: #2980b9;
+}
+
+a:hover {
+  color: #2a9feb
+}
+
+
+
+/*.container {*/
+  /*margin-right: 20px;*/
+  /*margin-left: 20px;*/
+
+
+/*}*/
