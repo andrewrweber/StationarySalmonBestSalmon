@@ -129,3 +129,8 @@ textarea {
 .winner {
   color: green;
 }
+
+h1, h3 {
+  color: #2980b9;
+}
+
