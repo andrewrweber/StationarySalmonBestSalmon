@@ -127,9 +127,17 @@ textarea {
 }
 
 .winner {
-  color: green;
+  background-color: #87D37C ;
 }
 
+.event-feed {
+  margin-bottom: 1em;
+}
+
+.event-table td{
+  padding-right: 2em;
+  padding-bottom: .25em;
+}
 h1, h3, h4, .active {
   color: #2980b9;
 }

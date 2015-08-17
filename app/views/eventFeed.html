@@ -1,12 +1,31 @@
 <section>
   <h1>Event Feed</h1>
-  <div ng-repeat="event in events" ng-class="{'winner': (event.votes / event.groupSize > .6)}">
-    <div>Event Name: <a ui-sref="event({id: event._id})">{{event.title}}</a></div>
-    <div>Group: <a ui-sref="group({id: event.group._id})">{{event.group.groupname}}</a></div>
-    <div>Description: {{event.description}}</div>
-    <div>Creator: <a ui-sref="user({id: event.creator._id})">{{event.creator.username}}</a></div>
-    <div>When: {{event.datetime | date: "EEEE, MMM d, y h:mm a"}}</div>
-    <div>Votes: {{event.votes}}</div>
-    <br>
+  <div class="event-feed" ng-repeat="event in events" ng-class="{'winner': (event.votes / event.groupSize > .6)}">
+    <table class="event-table">
+    <tr>
+      <td><strong>Event Name:</strong></td> 
+      <td><a ui-sref="event({id: event._id})">{{event.title}}</a></td>
+    </tr>
+    <tr>
+      <td><strong>Group:</strong> </td>
+      <td><a ui-sref="group({id: event.group._id})">{{event.group.groupname}}</a></td>
+    </tr>
+    <tr>
+      <td><strong>Description:</strong></td> 
+      <td>{{event.description}}</td>
+    </tr>
+    <tr>
+      <td><strong>Creator:</strong></td> 
+      <td><a ui-sref="user({id: event.creator._id})">{{event.creator.username}}</a></td>
+    </tr>
+    <tr>
+      <td><strong>When:</strong></td>
+      <td>{{event.datetime | date: "EEEE, MMM d, y h:mm a"}}</td>
+    </tr>
+    <tr>
+      <td><strong>Votes:</strong></td> 
+      <td>{{event.votes}}</td>
+    </tr>
+    </table>
   </div>
 </section>
