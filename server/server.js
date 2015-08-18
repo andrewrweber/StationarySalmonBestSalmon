@@ -18,6 +18,8 @@ var commentsRoute = require('./routes/comments');
 
 var app = express();
 
+var port = process.env.PORT || 8000;
+
 // Serve Angular app
 app.use(express.static(__dirname + '/../app'));
 
@@ -29,7 +31,7 @@ app.use('/api/users', usersRoute);
 app.use('/api/groups', auth.isAuthorized, groupsRoute);
 app.use('/api/comments', auth.isAuthorized, commentsRoute);
 
-app.listen(8000, function() {
+app.listen(port, function() {
   console.log("Listening on Port 8000");
 });
 
